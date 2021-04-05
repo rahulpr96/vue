@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="shortcut icon" href="./assets" type="image/x-icon"> -->
+</head>
+<body>
+    <div id="app">
+        <div>
+            <h2><strong>CARS</strong></h2>
+          <input type="text" v-model="search" placeholder="Search brand.."/>
+        </div>
+
+        <div>
+          <ul v-for="post in filteredList">
+            <li>
+                <a :href="post.link" target="_blank">
+                <img :src="post.img" width="30" height="20">
+                {{ post.title }}
+                </a>
+            </li>
+          </ul>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="app1.js"></script>
+</html>
